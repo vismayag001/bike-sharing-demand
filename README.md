@@ -1,4 +1,4 @@
-<img width="190" height="40" alt="image" src="https://github.com/user-attachments/assets/075ab136-34c4-415d-94bd-ec1984632e74" /># Bike Rental Demand Forecasting
+# Bike Rental Demand Forecasting
 
 ## 1. Project Overview
 
