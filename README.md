@@ -97,6 +97,8 @@ bike-sharing-demand/
     └── final_submission.csv
 
 
+
+
 ## 7. Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) was performed to understand the structure and characteristics of the dataset.
@@ -295,35 +297,62 @@ streamlit run app.py
 The Streamlit application will open in a web browser.
 
 
+
 ## 16. Results
 
-The project contains the following result files.
+The machine learning models were evaluated using Root Mean Squared Logarithmic Error (RMSLE), where a lower value indicates better performance.
 
-### Model Comparison
+### Initial Model Comparison
 
-results/model_comparison.csv
+The initial validation results were:
 
-Contains the validation performance of the initial machine learning models.
+| Model | RMSLE |
+|---|---:|
+| Random Forest | 0.3281389527 |
+| Gradient Boosting | 0.4527449250 |
+| Linear Regression | 1.2736421560 |
 
-### Evaluation Summary
-
-results/evaluation_summary.csv
-
-Contains the evaluation analysis performed after model training.
+Random Forest achieved the lowest RMSLE among the initial models and was therefore selected for further improvement.
 
 ### Hyperparameter Tuning
 
-results/tuning_results.csv
+Hyperparameter tuning was performed to improve the Random Forest model.
 
-Contains the results of the hyperparameter tuning experiments.
+The results were:
 
-### Final Submission
+| Model / Configuration | RMSLE |
+|---|---:|
+| Random Forest - 300 trees | 0.3275045940 |
+| Baseline Random Forest | 0.3281389527 |
+| Best Gradient Boosting | 0.3976124284 |
+
+The tuned Random Forest with 300 trees achieved the lowest RMSLE of **0.3275045940**.
+
+The tuning improved the Random Forest RMSLE from **0.3281389527** to **0.3275045940**.
+
+### Final Prediction
+
+The selected final model was used to generate predictions for the Kaggle test dataset.
+
+The final prediction file is:
 
 results/final_submission.csv
 
-Contains the final predictions generated for the Kaggle test dataset.
+The file contains the required:
 
-The exact model performance values are based on the experimental results generated during the project.
+datetime
+count
+
+columns and is ready for submission in the required format.
+
+### Result Files
+
+The project contains the following result files:
+
+- results/model_comparison.csv
+- results/evaluation_summary.csv
+- results/tuning_results.csv
+- results/final_submission.csv
 
 
 ## 17. How to Run the Project
