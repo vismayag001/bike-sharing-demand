@@ -1,5 +1,4 @@
 # Bike Rental Demand Forecasting
-
 ## 1. Project Overview
 
 This project focuses on forecasting bike rental demand using machine learning techniques.
