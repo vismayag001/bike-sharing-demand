@@ -1,4 +1,4 @@
-# Bike Rental Demand Forecasting
+<img width="190" height="40" alt="image" src="https://github.com/user-attachments/assets/075ab136-34c4-415d-94bd-ec1984632e74" /># Bike Rental Demand Forecasting
 
 ## 1. Project Overview
 
@@ -400,5 +400,8 @@ The project provides a complete machine learning pipeline from raw bike rental d
 ## 20. Author
 
 Bike Rental Demand Forecasting
-
 Machine Learning Mini Project
+VISMAYA G-PES1UG24CS645
+PURVIK GOWDA K-PES1UG25CS838
+
+
