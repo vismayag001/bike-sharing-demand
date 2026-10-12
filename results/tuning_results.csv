@@ -1,0 +1,4 @@
+Model,RMSLE
+Random Forest - 300 trees,0.32750459396147674
+Baseline Random Forest,0.3281389526975628
+Best Gradient Boosting,0.3976124283646737
