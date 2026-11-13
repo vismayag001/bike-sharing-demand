@@ -97,11 +97,6 @@ bike-sharing-demand/
     └── final_submission.csv
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 1a2f1772b9f19ba2128f9cace4d495d1aa2c86ae
 ## 7. Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) was performed to understand the structure and characteristics of the dataset.
