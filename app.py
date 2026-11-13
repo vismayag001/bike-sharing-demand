@@ -3,44 +3,26 @@ import pandas as pd
 import numpy as np
 import joblib
 
-
-# --------------------------------------------------
 # Page configuration
-# --------------------------------------------------
-
 st.set_page_config(
     page_title="Bike Rental Demand Predictor",
     page_icon="🚲",
     layout="centered"
 )
 
-
-# --------------------------------------------------
 # Load model
-# --------------------------------------------------
-
 model = joblib.load("models/final_model.pkl")
 feature_columns = joblib.load("models/feature_columns.pkl")
 
-
-# --------------------------------------------------
 # Title
-# --------------------------------------------------
-
 st.title("🚲 Bike Rental Demand Predictor")
-
 st.write(
     "Predict the expected number of bike rentals "
     "based on weather, time, and calendar conditions."
 )
 
-
-# --------------------------------------------------
 # User inputs
-# --------------------------------------------------
-
 st.subheader("Enter Conditions")
-
 
 season = st.selectbox(
     "Season",
@@ -110,11 +92,7 @@ working_day = st.selectbox(
     ["Yes", "No"]
 )
 
-
-# --------------------------------------------------
 # Convert inputs
-# --------------------------------------------------
-
 season_map = {
     "Spring": 1,
     "Summer": 2,
@@ -139,11 +117,7 @@ day_map = {
     "Sunday": 6
 }
 
-
-# --------------------------------------------------
 # Prediction
-# --------------------------------------------------
-
 if st.button("Predict Bike Demand"):
 
     season_value = season_map[season]
@@ -151,7 +125,6 @@ if st.button("Predict Bike Demand"):
     day_value = day_map[day_of_week]
 
     is_weekend = int(day_value >= 5)
-
     peak_hour = int(
         (
             day_value < 5
@@ -194,9 +167,9 @@ if st.button("Predict Bike Demand"):
     )
 
     prediction = model.predict(input_data)[0]
-
+    
     prediction = max(0, prediction)
-
+    
     st.success(
         f"Predicted Bike Rentals: {prediction:.0f}"
     )
